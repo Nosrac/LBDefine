@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>com.apple.Dictionary</string>
+	<key>LBTextInputTitle</key>
+	<string>Define</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.kyleacarson.LaunchBar.action.Define</string>
+	<key>CFBundleName</key>
+	<string>Define</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Kyle Carson</string>
+		<key>LBSummary</key>
+		<string>Allows searching the dictionary app or via the &quot;Define&quot; keyword</string>
+		<key>LBTwitter</key>
+		<string>@kyleacarson</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBSuggestionsScript</key>
+		<dict>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>suggestion.php</string>
+		</dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LBAssociatedApplication</key>
+	<string>com.apple.Dictionary</string>
+	<key>LBArgument</key>
+	<string>a word</string>
+	<key>LBRequiresArgument</key>
+	<true/>
+	<key>LBResult</key>
+	<string>open the Dictionary</string>
+	<key>LBAcceptedArgumentTypes</key>
+	<array>
+		<string>string</string>
+	</array>
+</dict>
+</plist>
