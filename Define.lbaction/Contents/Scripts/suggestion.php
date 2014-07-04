@@ -1,12 +1,22 @@
 <?
 
-function findWords($search, $maxWords = 20)
+function findWords($search, $language = "en", $maxWords = 20)
 {
+
 	$search = strtolower(trim($search));
 
 	if (strlen($search) == 0) return [];
 
-	exec("grep \"$search\" /usr/share/dict/words", $words);
+	global $argv;
+
+	$file = str_replace('Scripts/suggestion.php', "Resources/$language.lproj/dictionary.txt", $argv[0]);
+
+	if (! file_exists($file))
+	{
+		$file = "/usr/share/dict/words";
+	}
+
+	exec("grep \"$search\" \"$file\"", $words);
 
 	$scores = [];
 	foreach ($words as $word)
