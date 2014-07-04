@@ -1,4 +1,4 @@
 function runWithString(string)
 {
-	LaunchBar.openURL("dict://" + string);
+	LaunchBar.openURL("dict://" + encodeURIComponent(string));
 }
